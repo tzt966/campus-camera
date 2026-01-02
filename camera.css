@@ -193,7 +193,7 @@ div.arrow::before{
     transform-origin: calc(var(--tani) * 3.5) calc(var(--tani) * 26.5);
     rotate: -50deg;
     border-radius: 9999px;
-    background-color: #978d83;
+    background-color: #98ccd9;
 }
 
 div.arrow::after{
