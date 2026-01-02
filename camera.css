@@ -126,7 +126,7 @@ body{
     /*背景の線と透明度*/
     background-color: rgba(255,255,255,0.45);
     outline: solid calc(var(--tani)*5) rgba(255,255,255,0.3);
-    outline-offset: calc(var(--tani)*-2.5);
+    outline-offset: calc(var(--tani)*-5);
     backdrop-filter: blur(calc(var(--tani)*50));
     -webkit-backdrop-filter: blur(calc(var(--tani)*50));
 }
