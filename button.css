@@ -4,6 +4,7 @@
     --basecolor: #ffffff;
     --height: 131;
     --width: 420;
+    --borderthickness: 6;
     /*UIの色*/
     --uicolorone: #ff6e42;
     --uicolortwo: #fea128;
@@ -19,8 +20,8 @@ button.button-one{
     border: none;
 
     /*サイズ調整*/
-    height: calc(var(--tani) * var(--height) - (var(--tani) * 10));
-    width: calc(var(--tani) * var(--width) - (var(--tani) * 10));
+    height: calc(var(--tani) * var(--height) - (var(--tani) * var(--borderthickness)));
+    width: calc(var(--tani) * var(--width) - (var(--tani) * var(--borderthickness)));
 
     top:0px;
 
@@ -32,7 +33,7 @@ button.button-one{
 
     /*文字まわり*/
     font-family: "IBM Plex Sans JP", sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
     letter-spacing: 0.015em;
     font-size: calc(var(--tani) * var(--height) * 0.35);
@@ -44,14 +45,16 @@ button.button-one::before{
     content: "";
     display: block;
     position: absolute;
-    top: calc(var(--tani) * -10);
-    left: calc(var(--tani) * -10);
-    background-color: #ff0000;
-    height: calc(var(--tani) * var(--height) - (var(--tani) * 10));
-    width: calc(var(--tani) * var(--width) - (var(--tani) * 10));
-    padding: calc(var(--tani) * 10);
+    top: calc(var(--tani) * var(--borderthickness) * -1);
+    left: calc(var(--tani) * var(--borderthickness) * -1);
+    height: calc(var(--tani) * var(--height) - (var(--tani) * var(--borderthickness)));
+    width: calc(var(--tani) * var(--width) - (var(--tani) * var(--borderthickness)));
+    padding: calc(var(--tani) * var(--borderthickness));
     z-index: -1;
 
     /*角丸処理*/
     border-radius: 9999px;
+
+    /*背景*/
+    background: linear-gradient(#f1af61,#f4600a);
 }
