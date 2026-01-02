@@ -48,3 +48,10 @@ function draw() {
 
   requestAnimationFrame(draw);
 }
+
+//キャラごとに色分けするやつ
+
+const select = document.getElementById('character');
+select.addEventListener('change', ()=>{
+  select.className = select.value
+});
