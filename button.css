@@ -10,27 +10,25 @@
 }
 
 button.button-one{
-    display: inline-block;
-    margin: 0px;
+    display: block;
+    position: relative;
+    margin: 10px;
     padding: 0px;
     /*装飾の初期化*/
     background: none;
     border: none;
 
     /*サイズ調整*/
-    height: calc(var(--tani) * var(--height));
-    width: calc(var(--tani) * var(--width));
+    height: calc(var(--tani) * var(--height) - (var(--tani) * 10));
+    width: calc(var(--tani) * var(--width) - (var(--tani) * 10));
+
+    top:0px;
 
     /*角丸処理*/
     border-radius: calc(var(--tani) * var(--height));
 
     /*背景色*/
     background: linear-gradient(135deg, var(--uicolorone), var(--uicolortwo));
-
-    /*アウトライン*/
-    outline: calc(var(--tani) * 5) solid #ff0000;
-    outline-offset: calc(var(--tani) * -5);
-    outline-color: linear-gradient(var(--uicolortwo), var(--uicolorone));
 
     /*文字まわり*/
     font-family: "IBM Plex Sans JP", sans-serif;
@@ -40,4 +38,20 @@ button.button-one{
     font-size: calc(var(--tani) * var(--height) * 0.35);
     color: var(--basecolor);
 
+}
+
+button.button-one::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(var(--tani) * -10);
+    left: calc(var(--tani) * -10);
+    background-color: #ff0000;
+    height: calc(var(--tani) * var(--height) - (var(--tani) * 10));
+    width: calc(var(--tani) * var(--width) - (var(--tani) * 10));
+    padding: calc(var(--tani) * 10);
+    z-index: -1;
+
+    /*角丸処理*/
+    border-radius: 9999px;
 }
