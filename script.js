@@ -52,6 +52,9 @@ function draw() {
 //キャラごとに色分けするやつ
 
 const select = document.getElementById('character');
+const target = document.getElementById('target');
 select.addEventListener('change', ()=>{
-  select.className = select.value
+  select.className = select.value;
+  target.className = "";
+  target.classList.add('arrow', select.value);
 });
