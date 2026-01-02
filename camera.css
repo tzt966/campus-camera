@@ -1,0 +1,237 @@
+:root{
+    --tani: 0.3px;
+    --textcolor: #2e2e2e;
+    --basecolor: #ffffff;
+    /*キャラカラー*/
+    --colorone: #d1e3e5;
+    --colortwo: #c8caca;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+#wrapper{
+    padding: 0px;
+    margin: 0px;
+}
+
+#mobile{
+    /*描画エリアサイズの設定(iphone15)*/
+    display: block;
+    position: relative;
+    width: calc(1179 * var(--tani));
+    height: calc(2556 * var(--tani));
+    padding: 0px;
+    margin: 0px;
+    /*background: repeating-linear-gradient(to right, #e98304,#e98304 calc(var(--tani)*15),#ecc7c7 calc(var(--tani)*15),#ecc7c7 calc(var(--tani)*30))*/
+    background-color: #000000;
+}
+
+/*ビデオ*/
+#video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#canvas{
+    object-fit: cover;
+    display: block;
+}
+
+/*会話エリア*/
+.text-area{
+    display: block;
+    position: absolute;
+    text-align: left;
+    margin-left: calc((1179 - 1048)* var(--tani) * 0.5);
+    top: calc(1843 * var(--tani));
+}
+
+/*発言者*/
+.speakername-area{
+    position: relative;
+    width: calc(464 * var(--tani));
+    height: calc(70 * var(--tani));
+    padding: 0px;
+    margin: 0px;
+
+    /*角丸の処理*/
+    border-top-left-radius: calc(35 * var(--tani));
+    border-top-right-radius: calc(35 * var(--tani));
+    border-bottom-right-radius: calc(35 * var(--tani));
+
+    background-color: aqua;
+}
+
+.speakername-area select{
+    position: absolute;
+    top:0;
+    background: linear-gradient(to right, #d1e3e5,#98ccd9);
+    color: var(--textcolor);
+    width: 100%;
+    height: 100%;
+    padding-left: calc(var(--tani)*35);
+    line-height: calc(70 * var(--tani));
+    padding-top: calc(4.5 * var(--tani));
+
+    /*角丸の処理*/
+    border-top-left-radius: calc(35 * var(--tani));
+    border-top-right-radius: calc(35 * var(--tani));
+    border-bottom-right-radius: calc(35 * var(--tani));
+
+    /*デザイン*/
+    border: none;
+    outline: none;
+    box-shadow: none;
+    overflow: hidden;
+    background-clip: padding-box;
+    appearance: none;
+
+    /*文字の設定*/
+    font-family: "IBM Plex Sans JP", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.015em;
+    font-size: calc(var(--tani)*39);
+}
+
+.speakername-area select option{
+    padding: 0px;
+    margin: 0px;
+    background: none;
+
+    /*角丸の処理*/
+    border-top-left-radius: calc(35 * var(--tani));
+    border-top-right-radius: calc(35 * var(--tani));
+    border-bottom-right-radius: calc(35 * var(--tani));
+}
+
+
+/*発話コンテンツ*/
+.dialogue-area{
+    display: block;
+    width: calc(1048 * var(--tani));
+    height: calc(298 * var(--tani));
+    padding: 0px;
+    margin: 0px;
+    /*角丸の処理*/
+    border-top-right-radius: calc(38 * var(--tani));
+    border-bottom-left-radius: calc(38 * var(--tani));
+    /*背景の線と透明度*/
+    background-color: rgba(255,255,255,0.45);
+    outline: solid calc(var(--tani)*5) rgba(255,255,255,0.3);
+    outline-offset: calc(var(--tani)*-5);
+    backdrop-filter: blur(calc(var(--tani)*50));
+    -webkit-backdrop-filter: blur(calc(var(--tani)*50));
+}
+
+.dialogue-area p{
+    padding: 0px;
+    margin: 0px;
+    padding-left: calc(var(--tani)*60);
+    padding-right: calc(var(--tani)*60);
+    padding-top: calc(var(--tani)*55);
+    
+    /*文字の設定*/
+    font-family: "IBM Plex Sans JP", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--textcolor);
+    letter-spacing: 0.015em;
+    font-size: calc(var(--tani)*43);
+    line-height: calc(var(--tani)*60);
+}
+
+.dialogue-area p input{
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    
+    /*文字の設定*/
+    font-family: "IBM Plex Sans JP", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--textcolor);
+    letter-spacing: 0.015em;
+    font-size: calc(var(--tani)*43);
+    line-height: calc(var(--tani)*60);
+
+    /*背景*/
+    background: none;
+    box-shadow: none;
+    border: none;
+
+    width: 100%;
+}
+
+button{
+    width:calc(var(--tani)*300);
+    height:calc(var(--tani)*100);
+}
+
+/*各アイドルの色*/
+
+select.saki{
+    background: linear-gradient(to right, #ff5164,#ffb8a8);
+    color: #ffffff;
+}
+
+select.temari{
+    background: linear-gradient(to right, #25b6ef,#84e7e4);
+    color: #ffffff;
+}
+
+select.kotone{
+    background: linear-gradient(to right, #f8d71e,#feb6d3);
+    color: #ffffff;
+}
+select.mao{
+    background: linear-gradient(to right, #c45dca,#faaaa9);
+    color: #ffffff;
+}
+
+select.lilja{
+    background: linear-gradient(to right, #d1e3e5,#98ccd9);
+    color: var(--textcolor);
+}
+
+select.china{
+    background: linear-gradient(to right, #ff8921,#ff5e57);
+    color: #ffffff;
+}
+
+select.sumika{
+    background: linear-gradient(to right, #92dd5b,#cce21f);
+    color: var(--textcolor);
+}
+
+select.hiro{
+    background: linear-gradient(to right, #00bed8,#5380fd);
+    color: #ffffff;
+}
+
+select.sena{
+    background: linear-gradient(to right, #f5b04b,#f3e781);
+    color: var(--textcolor);
+}
+
+select.ume{
+    background: linear-gradient(to right, #f74b29,#f0c64e);
+    color: #ffffff;
+}
+
+select.rinami{
+    background: linear-gradient(to right, #fd7ec3,#f4b7fd);
+    color: #ffffff;
+}
+
+select.misuzu{
+    background: linear-gradient(to right, #70a3fc,#ceafff);
+    color: #ffffff;
+}

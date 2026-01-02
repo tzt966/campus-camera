@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Campus Camera</title>
+        <link rel="stylesheet" href="camera.css">
+
+        <!--webフォント読み込み-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="mobile">
+                <video id="video" autoplay playsinline muted></video>
+                <canvas id="canvas"></canvas>
+                <div class="text-area">
+                    <div class="speakername-area">
+                            <select id="character">
+                                <option value="lilja">リーリヤ</option>
+                                <option value="saki">咲季</option>
+                                <option value="temari">手毬</option>
+                                <option value="kotone">ことね</option>
+                                <option value="mao">麻央</option>
+                                <option value="china">千奈</option>
+                                <option value="sumika">清夏</option>
+                                <option value="hiro">広</option>
+                                <option value="sena">星南</option>
+                                <option value="ume">佑芽</option>
+                                <option value="rinami">莉波</option>
+                                <option value="misuzu">美鈴</option>
+                                <option value="tsubame">燕</option>
+                            </select>
+                    </div>
+                    <div class="dialogue-area">
+                        <p id="dialogue-content">
+                            <input type="text" name="talk1" value="かわいい……です……！">
+                            <input type="text" name="talk2" value="メイドさん……！">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button id="start">カメラ起動</button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
