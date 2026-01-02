@@ -56,5 +56,5 @@ button.button-one::before{
     border-radius: 9999px;
 
     /*背景*/
-    background: linear-gradient(#eeaf00,#f55f12);
+    background: linear-gradient(#e9d584,#f55f12);
 }
