@@ -1,0 +1,43 @@
+:root{
+    --tani: 0.3px;
+    --textcolor: #2e2e2e;
+    --basecolor: #ffffff;
+    --height: 131;
+    --width: 420;
+    /*UIの色*/
+    --uicolorone: #ff6e42;
+    --uicolortwo: #fea128;
+}
+
+button.button-one{
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    /*装飾の初期化*/
+    background: none;
+    border: none;
+
+    /*サイズ調整*/
+    height: calc(var(--tani) * var(--height));
+    width: calc(var(--tani) * var(--width));
+
+    /*角丸処理*/
+    border-radius: calc(var(--tani) * var(--height));
+
+    /*背景色*/
+    background: linear-gradient(135deg, var(--uicolorone), var(--uicolortwo));
+
+    /*アウトライン*/
+    outline: calc(var(--tani) * 5) solid #ff0000;
+    outline-offset: calc(var(--tani) * -5);
+    outline-color: linear-gradient(var(--uicolortwo), var(--uicolorone));
+
+    /*文字まわり*/
+    font-family: "IBM Plex Sans JP", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.015em;
+    font-size: calc(var(--tani) * var(--height) * 0.35);
+    color: var(--basecolor);
+
+}
