@@ -1,5 +1,5 @@
 :root{
-    --tani: 0.3px;
+    --tani: 1px;
     --textcolor: #2e2e2e;
     --basecolor: #ffffff;
     /*キャラカラー*/
@@ -25,7 +25,7 @@ body{
     padding: 0px;
     margin: 0px;
     /*background: repeating-linear-gradient(to right, #e98304,#e98304 calc(var(--tani)*15),#ecc7c7 calc(var(--tani)*15),#ecc7c7 calc(var(--tani)*30))*/
-    background-color: #000000;
+    background-color: #b97272;
 }
 
 /*ビデオ*/
@@ -202,13 +202,13 @@ div.arrow::after{
     position: relative;
     width: calc(var(--tani) * 7);
     height: calc(var(--tani) * 30);
-    transform-origin: calc(var(--tani)*3.5 calc(var(--tani)*26.5));
+    transform-origin: calc(var(--tani) * 3.5) calc(var(--tani) * 26.5);
     rotate: 50deg;
     border-radius: 9999px;
     background-color: #98ccd9;
     /*位置調整*/
-    top: calc(sin(50deg) * var(--tani) * 33.5 * -1);
-    left: calc(cos(50deg) * var(--tani) * 30 * 0.5)
+    top: calc(sin(50deg) * var(--tani) * ( 33.5 + 5.5 ) * -1);
+    left: calc(cos(50deg) * var(--tani) * (30 - 25) * 0.5);
 }
 
 
@@ -216,6 +216,504 @@ div.arrow::after{
     0% , 100% {transform: translate(0px, 0px);}
     50% {transform: translate(0px, calc(var(--tani) * 7));}
 }
+
+/*下部メニュー*/
+div.undermenu-area{
+    display: flex;
+    position: absolute;
+    top: calc(var(--tani) * 2285);
+    margin: 0px;
+    padding: 0px;
+    width: calc(var(--tani) * (1048 - 68));
+    margin-left: calc((1179 - 1048)* var(--tani) * 0.5);
+    padding-left: calc(var(--tani) * 68);
+}
+
+/*箱のやつ*/
+.box{
+    display: block;
+    width: calc(var(--tani) * 45);
+    height: calc(var(--tani) * 45);
+    margin: 0px;
+    margin-top: calc(var(--tani) * 16);
+    margin-right: calc(var(--tani) * (1048 - 4 * (206 + 17) - (45 + 68)));
+}
+
+.box-kado1{
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    width: 0px;
+    height: 0px;
+}
+
+.box-kado1::before{
+    content: "";
+    display: block;
+    position: relative;
+    width: calc(var(--tani) * 5);
+    height: calc(var(--tani) * 16);
+    background-color: var(--basecolor);
+
+    /*角丸処理*/
+    border-radius: calc(var(--tani) * 2.5);
+}
+
+.box-kado1::after{
+    content: "";
+    display: block;
+    position: relative;
+    width: calc(var(--tani) * 16);
+    height: calc(var(--tani) * 5);
+    background-color: var(--basecolor);
+
+    /*角丸処理*/
+    border-radius: calc(var(--tani) * 2.5);
+
+    /*位置調整*/
+    top: calc(var(--tani) * 16 * -1);
+}
+
+.box-kado2{
+    display: block;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 0px;
+    height: 0px;
+
+    /*位置調整*/
+    left: calc(var(--tani) * 29);
+}
+
+.box-kado2::before{
+    content: "";
+    display: block;
+    position: relative;
+    width: calc(var(--tani) * 5);
+    height: calc(var(--tani) * 16);
+    background-color: var(--basecolor);
+
+    /*角丸処理*/
+    border-radius: calc(var(--tani) * 2.5);
+
+    /*位置調整*/
+    left: calc(var(--tani) * 11);
+}
+
+.box-kado2::after{
+    content: "";
+    display: block;
+    position: relative;
+    width: calc(var(--tani) * 16);
+    height: calc(var(--tani) * 5);
+    background-color: var(--basecolor);
+
+    /*角丸処理*/
+    border-radius: calc(var(--tani) * 2.5);
+
+    /*位置調整*/
+    top: calc(var(--tani) * 16 * -1);
+}
+
+.box-kado3{
+    display: block;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 0px;
+    height: 0px;
+
+    /*位置調整*/
+    top: calc(var(--tani) * 29);
+}
+
+.box-kado3::before{
+    content: "";
+    display: block;
+    position: relative;
+    width: calc(var(--tani) * 5);
+    height: calc(var(--tani) * 16);
+    background-color: var(--basecolor);
+
+    /*角丸処理*/
+    border-radius: calc(var(--tani) * 2.5);
+}
+
+.box-kado3::after{
+    content: "";
+    display: block;
+    position: relative;
+    width: calc(var(--tani) * 16);
+    height: calc(var(--tani) * 5);
+    background-color: var(--basecolor);
+
+    /*角丸処理*/
+    border-radius: calc(var(--tani) * 2.5);
+
+    /*位置調整*/
+    top: calc(var(--tani) * 5 * -1);
+}
+
+.box-kado4{
+    display: block;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 0px;
+    height: 0px;
+
+    /*位置調整*/
+    top: calc(var(--tani) * 29);
+    left: calc(var(--tani) * 29);
+}
+
+.box-kado4::before{
+    content: "";
+    display: block;
+    position: relative;
+    width: calc(var(--tani) * 5);
+    height: calc(var(--tani) * 16);
+    background-color: var(--basecolor);
+
+    /*角丸処理*/
+    border-radius: calc(var(--tani) * 2.5);
+
+    /*位置調整*/
+    left: calc(var(--tani) * 11);
+}
+
+.box-kado4::after{
+    content: "";
+    display: block;
+    position: relative;
+    width: calc(var(--tani) * 16);
+    height: calc(var(--tani) * 5);
+    background-color: var(--basecolor);
+
+    /*角丸処理*/
+    border-radius: calc(var(--tani) * 2.5);
+
+    /*位置調整*/
+    top: calc(var(--tani) * 5 * -1);
+}
+
+div.underarea-button{
+    display: flex;
+    width: calc(var(--tani) * 206);
+    height: calc(var(--tani) * 78);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 9999px;
+    margin-left: calc(var(--tani) * 17);
+
+    /*文字周り*/
+    font-family: "IBM Plex Sans JP", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--basecolor);
+    letter-spacing: 0.015em;
+    font-size: calc(var(--tani)*24.2);
+    line-height: calc(var(--tani)*78);
+
+}
+
+/*ロゴのエリア（共通）*/
+.logo{
+    display: block;
+    height: calc(var(--tani) * 78);
+    width: calc(var(--tani) * 78);
+    margin-right: calc(var(--tani) * 6);
+}
+
+/*三角標準形*/
+.triangle{
+    display: block;
+    height: calc(var(--tani) * 38);
+    width: calc(var(--tani) * 4);
+    background-color: var(--basecolor);
+    border-radius: 9999px;
+
+    /*位置調整*/
+    margin-top: calc(var(--tani) * 20);
+
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.triangle::before{
+    content: "";
+    display: block;
+    position: relative;
+    width: calc(var(--tani) * 4);
+    height: calc(var(--tani) * sin(45deg) * 38);
+    rotate: -45deg;
+    background-color: var(--basecolor);
+    border-radius: 9999px;
+
+    /*位置調整*/
+    top: calc(var(--tani) * -3);
+    left: calc(var(--tani) * sin(45deg) * 18 - (var(--tani) * 4))
+}
+
+.triangle::after{
+    content: "";
+    display: block;
+    position: relative;
+    width: calc(var(--tani) * 4);
+    height: calc(var(--tani) * sin(45deg) * 38);
+    rotate: 45deg;
+    background-color: var(--basecolor);
+    border-radius: 9999px;
+
+    /*位置調整*/
+    top: calc(var(--tani) * sin(45deg) * 18 * -1);
+    left: calc(var(--tani) * sin(45deg) * 18 - (var(--tani) * 4))
+}
+
+/*skipの三角位置調整*/
+.skip div.triangle{
+    margin-left: calc(var(--tani) * 39);
+}
+
+/*skipの線*/
+.skipline{
+    display: block;
+    position: relative;
+    height: calc(var(--tani) * 38);
+    width: calc(var(--tani) * 4);
+    background-color: var(--basecolor);
+    border-radius: 9999px;
+
+    /*位置調整*/
+    top: calc(var(--tani) * 38 * -1);
+    left: calc(var(--tani) * 39 + (sin(45deg) * var(--tani) * 19) + var(--tani) * 6);
+}
+
+/*ログやるよー*/
+
+.logline1{
+    display: block;
+    width: calc(var(--tani) * 4);
+    height: calc(var(--tani) * 13);
+    background-color: var(--basecolor);
+    border-radius: 9999px;
+    rotate: -45deg;
+}
+
+.logline1::before{
+    content: "";
+    display: block;
+    position: relative;
+    height: calc(var(--tani) * 4);
+    width: calc(var(--tani) * 9);
+    border-radius: 9999px;
+    rotate: -45deg;
+    background-color: var(--basecolor);
+
+    /*位置調整*/
+    top: calc(var(--tani) * 7);
+    left: calc(var(--tani) * 5);
+}
+
+.logline1::after{
+    content: "";
+    display: block;
+    position: relative;
+    height: calc(var(--tani) * 4);
+    width: calc(var(--tani) * 9);
+    border-radius: 9999px;
+    rotate: 45deg;
+    background-color: var(--basecolor);
+
+    /*位置調整*/
+    top: calc(var(--tani) * 3);
+    left: calc(var(--tani) * -10);
+}
+
+.logbox1{
+    display: block;
+    width: calc(var(--tani) * 23);
+    height: calc(var(--tani) * 23);
+    border: solid calc(var(--tani) * 4) var(--basecolor);
+    border-top-left-radius: calc(var(--tani) * 31 * 0.5);
+    border-bottom-left-radius: calc(var(--tani) * 31 * 0.5);
+    border-bottom-right-radius: calc(var(--tani) * 31 * 0.5);
+}
+
+.logbox1::before{
+    content: "";
+    display: block;
+    position: relative;
+    height: calc(var(--tani) * 4);
+    width: calc(var(--tani) * 13);
+    border-radius: 9999px;
+    background-color: var(--basecolor);
+
+    /*位置調整*/
+    top: calc(var(--tani) * 6);
+    left: calc(var(--tani) * 5);
+}
+
+.logbox1::after{
+    content: "";
+    display: block;
+    position: relative;
+    height: calc(var(--tani) * 4);
+    width: calc(var(--tani) * 9);
+    border-radius: 9999px;
+    background-color: var(--basecolor);
+
+    /*位置調整*/
+    top: calc(var(--tani) * 9);
+    left: calc(var(--tani) * 9);
+}
+
+.logbox2{
+    display: block;
+    width: calc(var(--tani) * 23);
+    height: calc(var(--tani) * 23);
+    border: solid calc(var(--tani) * 4) var(--basecolor);
+    border-top-left-radius: calc(var(--tani) * 31 * 0.5);
+    border-top-right-radius: calc(var(--tani) * 31 * 0.5);
+    border-bottom-right-radius: calc(var(--tani) * 31 * 0.5);
+}
+
+.logbox2::before{
+    content: "";
+    display: block;
+    position: relative;
+    height: calc(var(--tani) * 4);
+    width: calc(var(--tani) * 13);
+    border-radius: 9999px;
+    background-color: var(--basecolor);
+
+    /*位置調整*/
+    top: calc(var(--tani) * 6);
+    left: calc(var(--tani) * 5);
+}
+
+.logbox2::after{
+    content: "";
+    display: block;
+    position: relative;
+    height: calc(var(--tani) * 4);
+    width: calc(var(--tani) * 9);
+    border-radius: 9999px;
+    background-color: var(--basecolor);
+
+    /*位置調整*/
+    top: calc(var(--tani) * 9);
+    left: calc(var(--tani) * 5);
+}
+
+.logline2{
+    display: block;
+    width: calc(var(--tani) * 4);
+    height: calc(var(--tani) * 13);
+    background-color: var(--basecolor);
+    border-radius: 9999px;
+    rotate: -45deg;
+}
+
+.logline2::before{
+    content: "";
+    display: block;
+    position: relative;
+    height: calc(var(--tani) * 4);
+    width: calc(var(--tani) * 9);
+    border-radius: 9999px;
+    rotate: -45deg;
+    background-color: var(--basecolor);
+
+    /*位置調整*/
+    top: calc(var(--tani) * 2);
+    left: calc(var(--tani) * -10);
+}
+
+.logline2::after{
+    content: "";
+    display: block;
+    position: relative;
+    height: calc(var(--tani) * 4);
+    width: calc(var(--tani) * 9);
+    border-radius: 9999px;
+    rotate: 45deg;
+    background-color: var(--basecolor);
+
+    /*位置調整*/
+    top: calc(var(--tani) * -1);
+    left: calc(var(--tani) * 5);
+}
+
+/*ログパーツの位置調整*/
+.logline1{
+    position: relative;
+    top: calc(var(--tani) * 3);
+    left: calc(var(--tani) * sin(45deg) * 9);
+}
+
+.logbox1{
+    position: relative;
+    top: calc(sin(45deg) * var(--tani) * 13 * -1 - (var(--tani) * 4));
+    left: calc(var(--tani) * 19);
+}
+
+.logbox2{
+    position: relative;
+    top: calc(var(--tani) * 23 * -1);
+}
+
+.logline2{
+    position: relative;
+    top: calc(var(--tani) * -40);
+    left: calc(var(--tani) * sin(45deg) * 56);
+}
+
+/*ログの位置調整*/
+.log{
+    width: calc(var(--tani) * (78 - 25));
+    height: calc(var(--tani) * (78 - 13));
+    padding: 0px;
+    margin: 0px;
+    padding-top: calc(var(--tani) * 13);
+    padding-left: calc(var(--tani) * 25);
+    margin-right: calc(var(--tani) * 15);;
+}
+
+/*AUTOの位置調整とか*/
+.ikkome{
+    margin-left: calc(var(--tani) * 28);
+}
+
+.nikome{
+    position: relative;
+    top: calc(var(--tani) * (78 - 20) * -1);
+    left: calc(var(--tani) * 33 + (sin(45deg) * var(--tani) * 19) + var(--tani) * 6);
+}
+
+/*早送り*/
+.clip{
+    clip-path: polygon(0 0, 350% 0, 350% 100%, 0 100%);
+}
+
+.tri1{
+    position: relative;
+    left: calc(var(--tani) * 32);
+}
+
+.tri2{
+    position: relative;
+    top: calc(var(--tani) * 58 * -1);
+    left: calc(var(--tani) * (13 + 32));
+}
+
+.tri3{
+    position: relative;
+    top: calc(var(--tani) * 116 * -1);
+    left: calc(var(--tani) * 13 * 2 + var(--tani) * 32);
+}
+
 
 /*矢印の色*/
 .arrow.saki::before,
