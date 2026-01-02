@@ -4,7 +4,7 @@
     --basecolor: #ffffff;
     --height: 131;
     --width: 420;
-    --borderthickness: 6;
+    --borderthickness: 5;
     /*UIの色*/
     --uicolorone: #ff6e42;
     --uicolortwo: #fea128;
@@ -56,5 +56,5 @@ button.button-one::before{
     border-radius: 9999px;
 
     /*背景*/
-    background: linear-gradient(#f1af61,#f4600a);
+    background: linear-gradient(#eeaf00,#f55f12);
 }
