@@ -236,6 +236,11 @@ select.misuzu{
 }
 
 select.tsubame{
-    background: linear-gradient(to right, #70a3fc,#ceafff);
+    background: linear-gradient(to right, #8974ff,#c7b7ff);
+    color: #ffffff;
+}
+
+select.grey{
+    background: linear-gradient(to right, #978d83,#978d83);
     color: #ffffff;
 }
