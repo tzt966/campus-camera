@@ -205,7 +205,7 @@ div.arrow::after{
     transform-origin: calc(var(--tani)*3.5 calc(var(--tani)*26.5));
     rotate: 50deg;
     border-radius: 9999px;
-    background-color: #978d83;
+    background-color: #98ccd9;
     /*位置調整*/
     top: calc(sin(50deg) * var(--tani) * 33.5 * -1);
     left: calc(cos(50deg) * var(--tani) * 30 * 0.5)
@@ -218,58 +218,72 @@ div.arrow::after{
 }
 
 /*矢印の色*/
+.arrow.saki::before,
 .arrow.saki::after{
     background-color: #ff5164;
 }
 
+.arrow.temari::before,
 .arrow.temari::after{
     background-color: #25b6ef;
 }
 
+.arrow.kotone::before,
 .arrow.kotone::after{
     background-color: #f8d71e;
 }
 
+.arrow.mao::before,
 .arrow.mao::after{
     background-color: #c45dca;
 }
 
+.arrow.lilja::before,
 .arrow.lilja::after{
     background-color: #98ccd9;
 }
 
+.arrow.china::before,
 .arrow.china::after{
     background-color: #ff8921;
 }
 
+.arrow.sumika::before,
 .arrow.sumika::after{
     background-color: #92dd5b;
 }
 
+.arrow.hiro::before,
 .arrow.hiro::after{
     background-color: #00bed8;
 }
 
+.arrow.sena::before,
 .arrow.sena::after{
     background-color: #f5b04b;
 }
 
+.arrow.ume::before,
 .arrow.ume::after{
     background-color: #f74b29;
 }
 
+.arrow.rinami::before,
 .arrow.rinami::after{
     background-color: #fd7ec3;
 }
 
+.arrow.misuzu::before,
 .arrow.misuzu::after{
     background-color: #70a3fc;
 }
 
+.arrow.tsubame::before,
 .arrow.tsubame::after{
     background-color: #8974ff;
 }
 
+.arrow.grey::before,
 .arrow.grey::after{
     background-color: #978d83;
 }
