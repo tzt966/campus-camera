@@ -116,6 +116,7 @@ body{
 /*発話コンテンツ*/
 .dialogue-area{
     display: block;
+    position: relative;
     width: calc(1048 * var(--tani));
     height: calc(298 * var(--tani));
     padding: 0px;
@@ -172,6 +173,52 @@ body{
 button{
     width:calc(var(--tani)*300);
     height:calc(var(--tani)*100);
+}
+
+/*テキスト次送りの矢印*/
+div.arrow{
+    display: block;
+    position: absolute;
+    top: calc(var(--tani) * 225);
+    left: calc(var(--tani) * 977);
+    animation: guigui .9s infinite;
+}
+
+div.arrow::before{
+    content: "";
+    display: block;
+    position: relative;
+    width: calc(var(--tani) * 7);
+    height: calc(var(--tani) * 30);
+    transform-origin: calc(var(--tani) * 3.5) calc(var(--tani) * 26.5);
+    rotate: -50deg;
+    border-radius: 9999px;
+    background-color: #e78917;
+}
+
+div.arrow::after{
+    content: "";
+    display: block;
+    position: relative;
+    width: calc(var(--tani) * 7);
+    height: calc(var(--tani) * 30);
+    transform-origin: calc(var(--tani)*3.5 calc(var(--tani)*26.5));
+    rotate: 50deg;
+    border-radius: 9999px;
+    background-color: #e78917;
+    /*位置調整*/
+    top: calc(sin(50deg) * var(--tani) * 33.5 * -1);
+    left: calc(cos(50deg) * var(--tani) * 30 * 0.5)
+}
+
+
+@keyframes guigui{
+    0% , 100% {transform: translate(0px, 0px);}
+    50% {transform: translate(0px, calc(var(--tani) * 7));}
+}
+
+.lilja::after{
+    background-color: #00bed8;
 }
 
 /*各アイドルの色*/
