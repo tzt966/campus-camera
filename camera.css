@@ -1,5 +1,5 @@
 :root{
-    --tani: 10px;
+    --tani: 1px;
     --textcolor: #2e2e2e;
     --basecolor: #ffffff;
     /*キャラカラー*/
@@ -25,7 +25,7 @@ body{
     padding: 0px;
     margin: 0px;
     /*background: repeating-linear-gradient(to right, #e98304,#e98304 calc(var(--tani)*15),#ecc7c7 calc(var(--tani)*15),#ecc7c7 calc(var(--tani)*30))*/
-    background-color: #bfca24;
+    background-color: #1fd1e8;
 }
 
 /*ビデオ*/
