@@ -11,30 +11,7 @@ const baseheight = 1280;
 canvas.width = basewidth;
 canvas.height = baseheight;
 
-function resizeCanvas(){
-    const ww = window.innerWidth;
-    const wh = window.innerHeight;
 
-//    const aspect = basewidth / baseheight;
-
-    let displayWidth, displayHeight;
-
-    if (ww / wh > aspect) {
-        displayHeight = wh;
-        displayWidth = wh * aspect;
-    } else {
-        displayWidth = ww;
-        displayHeight = ww / aspect;
-    }
-
-    const scale = 1;
-
-    canvas.style.width = displayWidth * scale + "px";
-    canvas.style.height = displayHeight * scale + "px";
-}
-
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
 
 //セリフとか色々
 //話数部分
@@ -291,12 +268,12 @@ tp.addEventListener("click", async () =>{
   html2canvas(document.getElementById('mobile'),{
     scale: 1,           // 2倍の解像度で書き出し（ボケ防止）
     useCORS: true,      // 画像の読み込みエラー対策
-    width: 600,         // 切り出すサイズを固定
-    height: 1200,
+    width: 720,         // 切り出すサイズを固定
+    height: 1280,
     scrollX: 0,         // スクロール位置によるズレを防止
     scrollY: 0,
-    windowWidth: 650,   // ブラウザの幅を固定して計算させる
-    windowHeight: 650
+    windowWidth: 720,   // ブラウザの幅を固定して計算させる
+    windowHeight: 1280
   }).then(function(canvas){
         document.getElementById('result').src = canvas.toDataURL()}
       );
