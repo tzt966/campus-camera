@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>Campus Camera(Canvas版)</title>
+        <link rel="stylesheet" href="default.css">
+
+        <!--webフォント読み込み-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com"     crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@500;600;700&display=swap" rel="stylesheet">
+        <script src="
+https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js
+"></script>
+    </head>
+    <body>
+        <div id = "mobile">
+            <canvas id="camera"></canvas>
+            <div class="overlay">
+                <div class="dialogue-content">
+                    <input type="text" name="talk1" value="かわいい……です……！">
+                    <input type="text" name="talk2" value="メイドさん……！">
+                </div>
+            </div>
+        </div>
+        <button id="takepicture">撮影</button>
+        <img id="result">
+        <script src="camera.js"></script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+:root{
+    --unit: 1px;
+    --textcolor: #000000;
+    --scale: 1;
+}
+
+body{
+    background-color: rgb(224, 215, 215);
+    padding: 0;
+    margin: 0;
+}
+
+#mobile{
+    display: block;
+    position: relative;
+    height: 100vh;
+    width: calc(100vh * 9 / 16);
+    padding: 0;
+    margin: 0;
+    background-color: aqua;
+}
+
+#camera{
+    display: block;
+    background-color: rgb(151, 148, 148);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(116, 68, 68, 0.393);
+}
+
+.dialogue-content{
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+    width: 100%;
+    left: 5.8vh;
+    top: 76.3vh;
+
+}
+
+.dialogue-content input{
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+
+    /*文字の設定*/
+    font-family: "IBM Plex Sans JP", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--textcolor);
+    letter-spacing: 0.015em;
+    font-size: 2.1vh;
+}
+
