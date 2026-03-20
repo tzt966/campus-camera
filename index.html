@@ -11,82 +11,87 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@500;600;700&display=swap" rel="stylesheet">
+        <script src="
+https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js
+"></script>
     </head>
     <body>
         <div id="wrapper">
             <div id="mobile">
                 <video id="video" autoplay playsinline muted></video>
                 <canvas id="canvas"></canvas>
-                <div class="text-area">
-                    <div class="speakername-area">
-                            <select id="character">
-                                <option value="lilja">リーリヤ</option>
-                                <option value="saki">咲季</option>
-                                <option value="temari">手毬</option>
-                                <option value="kotone">ことね</option>
-                                <option value="mao">麻央</option>
-                                <option value="china">千奈</option>
-                                <option value="sumika">清夏</option>
-                                <option value="hiro">広</option>
-                                <option value="sena">星南</option>
-                                <option value="ume">佑芽</option>
-                                <option value="rinami">莉波</option>
-                                <option value="misuzu">美鈴</option>
-                                <option value="tsubame">燕</option>
-                                <option value="grey">副会長</option>
-                                <option value="grey">プロデューサー</option>
-                                <option value="grey">ダンストレーナー</option>
-                                <option value="grey">ボーカルトレーナー</option>
-                                <option value="grey">ビジュアルトレーナー</option>
-                                <option value="grey">一同</option>
-                                <option value="lilja">リーリヤ？</option>
-                            </select>
-                    </div>
-                    <div class="dialogue-area">
-                        <p id="dialogue-content">
-                            <input type="text" name="talk1" value="かわいい……です……！">
-                            <input type="text" name="talk2" value="メイドさん……！">
-                        </p>
-                        <div id="target" class="arrow"></div>
-                    </div>
-                </div>
-                <div class="undermenu-area">
-                    <div class="box">
-                        <div class="box-kado1"></div>
-                        <div class="box-kado2"></div>
-                        <div class="box-kado3"></div>
-                        <div class="box-kado4"></div>
-                    </div>
-                    <div class="underarea-button">
-                        <div class="logo skip">
-                            <div class="triangle"></div>
-                            <div class="skipline"></div>
+                <div id="overlay">
+                    <div class="text-area">
+                        <div class="speakername-area">
+                                <select id="character">
+                                    <option value="lilja">リーリヤ</option>
+                                    <option value="saki">咲季</option>
+                                    <option value="temari">手毬</option>
+                                    <option value="kotone">ことね</option>
+                                    <option value="mao">麻央</option>
+                                    <option value="china">千奈</option>
+                                    <option value="sumika">清夏</option>
+                                    <option value="hiro">広</option>
+                                    <option value="sena">星南</option>
+                                    <option value="ume">佑芽</option>
+                                    <option value="rinami">莉波</option>
+                                    <option value="misuzu">美鈴</option>
+                                    <option value="tsubame">燕</option>
+                                    <option value="grey">副会長</option>
+                                    <option value="grey">プロデューサー</option>
+                                    <option value="grey">ダンストレーナー</option>
+                                    <option value="grey">ボーカルトレーナー</option>
+                                    <option value="grey">ビジュアルトレーナー</option>
+                                    <option value="grey">一同</option>
+                                    <option value="lilja">リーリヤ？</option>
+                                </select>
                         </div>
-                        SKIP
-                    </div>
-                    <div class="underarea-button">
-                        <div class="logo log">
-                            <div class="logline1"></div>
-                            <div class="logbox1"></div>
-                            <div class="logbox2"></div>
-                            <div class="logline2"></div>
+                        <div class="dialogue-area">
+                            <p id="dialogue-content">
+                                <input type="text" name="talk1" value="かわいい……です……！">
+                                <input type="text" name="talk2" value="メイドさん……！">
+                            </p>
+                            <div id="target" class="arrow"></div>
                         </div>
-                        ログ
                     </div>
-                    <div class="underarea-button">
-                        <div class="logo">
-                            <div class="triangle ikkome"></div>
-                            <div class="triangle nikome"></div>
+                    <div class="undermenu-area">
+                        <div class="box">
+                            <div class="box-kado1"></div>
+                            <div class="box-kado2"></div>
+                            <div class="box-kado3"></div>
+                            <div class="box-kado4"></div>
                         </div>
-                        AUTO
-                    </div>
-                    <div class="underarea-button">
-                        <div class="logo">
-                            <div class="triangle clip tri1"></div>
-                            <div class="triangle clip tri2"></div>
-                            <div class="triangle tri3"></div>
+                        <div class="underarea-button">
+                            <div class="logo skip">
+                                <div class="triangle"></div>
+                                <div class="skipline"></div>
+                            </div>
+                            SKIP
                         </div>
-                        早送り
+                        <div class="underarea-button">
+                            <div class="logo log">
+                                <div class="logline1"></div>
+                                <div class="logbox1"></div>
+                                <div class="logbox2"></div>
+                                <div class="logline2"></div>
+                            </div>
+                            ログ
+                        </div>
+                        <div class="underarea-button">
+                            <div class="logo">
+                                <div class="triangle ikkome"></div>
+                                <div class="triangle nikome"></div>
+                            </div>
+                            AUTO
+                        </div>
+                        <div class="underarea-button">
+                            <div class="logo">
+                                <div class="triangle clip tri1"></div>
+                                <div class="triangle clip tri2"></div>
+                                <div class="triangle tri3"></div>
+                            </div>
+                            早送り
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,6 +99,7 @@
                 <button id="start" class="button-one">カメラ起動</button>
                 <button id="takepicture" class="button-one">撮影</button>
             </div>
+            <img id="result">
         </div>
         <script src="script.js"></script>
     </body>

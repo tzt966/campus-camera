@@ -2,6 +2,7 @@ const video  = document.getElementById("video");
 const canvas = document.getElementById("canvas");
 const ctx    = canvas.getContext("2d");
 const start  = document.getElementById("start");
+const tp = document.getElementById("takepicture");
 
 start.addEventListener("click", async () => {
   try {
@@ -58,4 +59,12 @@ select.addEventListener('change', ()=>{
   select.className = select.value;
   target.className = "";
   target.classList.add('arrow', select.value);
+});
+
+//撮影
+tp.addEventListener("click", async () =>{
+  alert("うんち");
+  html2canvas(document.getElementById('mobile')).then(function(canvas){
+        document.getElementById('result').src = canvas.toDataURL()}
+      );
 });

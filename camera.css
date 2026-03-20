@@ -36,6 +36,10 @@ body{
     display: block;
 }
 
+/*#overlay{
+    background-color: #70a3fc;
+}*/
+
 /*会話エリア*/
 .text-area{
     display: block;
