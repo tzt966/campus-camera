@@ -1,15 +1,3 @@
-:root{
-    --tani: 1px;
-    --textcolor: #2e2e2e;
-    --basecolor: #ffffff;
-    --height: 131;
-    --width: 420;
-    --borderthickness: 5;
-    /*UIの色*/
-    --uicolorone: #ff6e42;
-    --uicolortwo: #fea128;
-}
-
 button.button-one{
     display: block;
     position: relative;

@@ -1,0 +1,17 @@
+/*rootの宣言*/
+
+:root{
+    --tani: 1px;
+    --textcolor: #2e2e2e;
+    --basecolor: #ffffff;
+    /*キャラカラー*/
+    --colorone: #d1e3e5;
+    --colortwo: #c8caca;
+    /*下部ボタンの定数*/
+    --height: 131;
+    --width: 420;
+    --borderthickness: 5;
+    /*UIの色*/
+    --uicolorone: #ff6e42;
+    --uicolortwo: #fea128;
+}
