@@ -64,7 +64,16 @@ select.addEventListener('change', ()=>{
 //撮影
 tp.addEventListener("click", async () =>{
   alert("うんち");
-  html2canvas(document.getElementById('mobile')).then(function(canvas){
+  html2canvas(document.getElementById('mobile'),{
+    scale: 2,           // 2倍の解像度で書き出し（ボケ防止）
+    useCORS: true,      // 画像の読み込みエラー対策
+    width: 650,         // 切り出すサイズを固定
+    height: 650,
+    scrollX: 0,         // スクロール位置によるズレを防止
+    scrollY: 0,
+    windowWidth: 650,   // ブラウザの幅を固定して計算させる
+    windowHeight: 650
+  }).then(function(canvas){
         document.getElementById('result').src = canvas.toDataURL()}
       );
 });
