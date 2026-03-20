@@ -7,8 +7,9 @@ start.addEventListener("click", async () => {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({
       video: {
+        //外カメ指定
         facingMode: "environment",
-        frameRate: { ideal: 30 }
+        frameRate: { ideal: 60 }
       },
       audio: false
     });
@@ -42,7 +43,8 @@ function draw() {
     canvas.style.width = vw + "px";
     canvas.style.height = vh + "px";
 
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.scale(dpr, dpr);
+    //ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     initialized = true;
   }
 
