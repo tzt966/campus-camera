@@ -37,14 +37,13 @@ function draw() {
   if(!initialized){
     const dpr = window.devicePixelRatio || 1;
 
-    canvas.width = Math.round(vw * dpr);
-    canvas.height = Math.round(vh * dpr);
+    canvas.width = Math.floor(vw * dpr);
+    canvas.height = Math.floor(vh * dpr);
 
     canvas.style.width = vw + "px";
     canvas.style.height = vh + "px";
 
     ctx.scale(dpr, dpr);
-    //ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     initialized = true;
   }
 

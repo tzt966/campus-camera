@@ -1,7 +1,7 @@
 /*rootの宣言*/
 
 :root{
-    --tani: 1px;
+    --tani: 0.5px;
     --textcolor: #2e2e2e;
     --basecolor: #ffffff;
     /*キャラカラー*/
