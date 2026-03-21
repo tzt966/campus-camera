@@ -9,17 +9,20 @@ canvas.width = basewidth;
 canvas.height = baseheight;
 
 //サンプルテキスト定義
-let speaker = "手毬"
+let storytype = "親愛度";
+let tailno = "第１話";
+let speaker = "手毬";
 let textone = "私のことをよく調べもせずに";
 let texttwo = "きた方を、信用できません。";
 
 //色の定義
 const textcolor = "#2e2e2e";
+const white = "#ffffff";
 let speakercolor = "#ffffff";
 //グラデーション開始色
-let begincolor = "#ff0000";
+let begincolor = "#25b6ef";
 //グラデーション終了色
-let endcolor = "#ffff00";
+let endcolor = "#84e7e4";
 
 
 //図形描画
@@ -55,6 +58,17 @@ function drawUI(){
     context.strokeStyle = "#ffffffaa";
     context.roundRect(41.5,951.5,637,177,[0,18.5,0,18.5]);
     context.lineWidth = 3;
+    context.stroke();
+
+    //次送りの三角
+    context.beginPath();
+    context.moveTo(629,1099);
+    context.lineTo(640,1108);
+    context.lineTo(651,1099);
+    context.strokeStyle = begincolor;
+    context.lineWidth = 4;
+    context.lineCap = "round";
+    context.lineJoin = "round";
     context.stroke();
 
     //下のボタン
@@ -322,7 +336,15 @@ function drawUI(){
     context.lineJoin = "round";
     context.stroke();
 
-    //発言者    
+    //発言者
+        context.font = '600 16px "IBM Plex Sans JP"'
+        context.fillStyle = white;
+        context.fillText(storytype, 30, 60);
+
+        context.font = '600 24px "IBM Plex Sans JP"'
+        context.fillStyle = white;
+        context.fillText(tailno, 30, 91);
+        
         context.font = '600 24px "IBM Plex Sans JP"'
         context.fillStyle = speakercolor;
         context.fillText(speaker, 61, 939);
