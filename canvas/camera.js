@@ -1,4 +1,5 @@
 const canvas = document.getElementById("ui");
+const canvasB = document.getElementById("cam");
 const context = canvas.getContext("2d");
 const video  = document.getElementById("video");
 const start  = document.getElementById("start");
@@ -256,10 +257,3 @@ canvas.height = baseheight;
     context.lineCap = "round";
     context.lineJoin = "round";
     context.stroke();
-
-
-
-
-
-
-

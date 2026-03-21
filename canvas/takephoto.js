@@ -1,20 +1,20 @@
-const canvas = document.getElementById("cam");
-const context = canvas.getContext("2d");
-const video  = document.getElementById("video");
-const start  = document.getElementById("start");
-const tp = document.getElementById("takepicture");
+const canvasA = document.getElementById("cam");
+const contextA = canvasA.getContext("2d");
+const videoA  = document.getElementById("video");
+const startA  = document.getElementById("start");
+const tpA = document.getElementById("takepicture");
 
 let initialized = false;
 
 //内部解像度(固定)
-const basewidth = 720;
-const baseheight = 1280;
+const basewidthA = 720;
+const baseheightA = 1280;
 
-canvas.width = basewidth;
-canvas.height = baseheight;
+canvasA.width = basewidthA;
+canvasA.height = baseheightA;
 
 
-start.addEventListener("click", async () => {
+startA.addEventListener("click", async () => {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({
       video: {
@@ -25,9 +25,9 @@ start.addEventListener("click", async () => {
       audio: false
     });
 
-    video.srcObject = stream;
-    video.onloadedmetadata = () => {
-      video.play();
+    videoA.srcObject = stream;
+    videoA.onloadedmetadata = () => {
+      videoA.play();
       draw(); // ← canvas描画開始
     };
 
@@ -37,33 +37,63 @@ start.addEventListener("click", async () => {
 });
 
 function draw() {
-  const vw = video.videoWidth;
-  const vh = video.videoHeight;
+  const vw = videoA.videoWidth;
+  const vh = videoA.videoHeight;
 
   if (!vw || !vh) {
     requestAnimationFrame(draw);
     return;
   }
 
-  if(!initialized){
+  if (!initialized) {
     const dpr = window.devicePixelRatio || 1;
 
-    canvas.width = Math.floor(vw * dpr);
-    canvas.height = Math.floor(vh * dpr);
+    canvasA.width = basewidthA * dpr;
+    canvasA.height = baseheightA * dpr;
 
-    canvas.style.width = vw + "px";
-    canvas.style.height = vh + "px";
+    canvasA.style.width = basewidthA + "px";
+    canvasA.style.height = baseheightA + "px";
 
-    context.scale(dpr, dpr);
+    contextA.scale(dpr, dpr);
     initialized = true;
   }
+
+  // クリア
+  contextA.clearRect(0, 0, basewidthA, baseheightA);
+
+  // アスペクト比
+  const videoRatio = vw / vh;
+  const canvasRatio = basewidthA / baseheightA;
+
+  let sx, sy, sw, sh;
+
+  if (videoRatio > canvasRatio) {
+    // 横長 → 左右カット
+    sh = vh;
+    sw = vh * canvasRatio;
+    sx = (vw - sw) / 2;
+    sy = 0;
+  } else {
+    // 縦長 → 上下カット
+    sw = vw;
+    sh = vw / canvasRatio;
+    sx = 0;
+    sy = (vh - sh) / 2;
+  }
+
+  // 描画（これが本体）
+  contextA.drawImage(
+    videoA,
+    sx, sy, sw, sh,
+    0, 0, basewidthA, baseheightA
+  );
 
   requestAnimationFrame(draw);
 }
 
 
 //撮影
-tp.addEventListener("click", async () =>{
+tpA.addEventListener("click", async () =>{
   alert("うんち");
   html2canvas(document.getElementById('mobile'),{
     scale: 1,           // 2倍の解像度で書き出し（ボケ防止）
@@ -74,7 +104,7 @@ tp.addEventListener("click", async () =>{
     scrollY: 0,
     windowWidth: 720,   // ブラウザの幅を固定して計算させる
     windowHeight: 1280
-  }).then(function(canvas){
-        document.getElementById('result').src = canvas.toDataURL()}
+  }).then(function(canvasA){
+        document.getElementById('result').src = canvasA.toDataURL()}
       );
 });
