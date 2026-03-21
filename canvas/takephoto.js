@@ -2,6 +2,7 @@ const start = document.getElementById("start");
 const canvasB = document.getElementById("cam");
 const ctx    = canvasB.getContext("2d");
 const video  = document.getElementById("video");
+const mobile  = document.getElementById("ui");
 
 const takephoto = document.getElementById("takepicture");
 
@@ -35,6 +36,7 @@ start.addEventListener("click", async () => {
 function draw() {
   const vw = video.videoWidth;
   const vh = video.videoHeight;
+
 
   if (!vw || !vh) {
     requestAnimationFrame(draw);
@@ -88,11 +90,34 @@ satuei.addEventListener("click", async () => {
     outCanvas.width = 720;
     outCanvas.height = 1280;
 
-    // videoを出力サイズに合わせて描画
-    outCtx.drawImage(video, 0, 0, outCanvas.width, outCanvas.height);
+    //入力の寸法
+    const vWidth = video.videoWidth;
+    const vHeight = video.videoHeight;
+    const vRatio = vWidth / vHeight;
+    //キャンバスのアスペクト比
+    const cRatio = 9 / 16;
 
-    // UIを重ねる
-    outCtx.drawImage(canvasB, 0, 0, outCanvas.width, outCanvas.height);
+    //変数の定義
+    let sx, sy, sw, sh;
+
+    //入力が横長のとき
+    if(vRatio > cRatio) {
+        sw = vHeight * cRatio;
+        sh = vHeight;
+        sx = (vWidth - sw) / 2;
+        sy = 0;
+    } else {
+        sw = vWidth;
+        sh = vHeight * cRatio;
+        sx = 0;
+        sy = (vHeight - sh) / 2;
+    }
+
+    // videoを出力サイズに合わせて描画
+    outCtx.drawImage(video, sx, sy, sw, sh, 0, 0, outCanvas.width, outCanvas.height);
+
+    //UIを描画
+    outCtx.drawImage(mobile, 0, 0, outCanvas.width, outCanvas.height);
 
     // 保存
     document.getElementById("kekka").src = outCanvas.toDataURL();
