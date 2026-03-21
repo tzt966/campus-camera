@@ -1,4 +1,4 @@
-const canvas = document.getElementById("camera");
+const canvas = document.getElementById("ui");
 const context = canvas.getContext("2d");
 const video  = document.getElementById("video");
 const start  = document.getElementById("start");
@@ -263,20 +263,3 @@ canvas.height = baseheight;
 
 
 
-
-//撮影
-tp.addEventListener("click", async () =>{
-  alert("うんち");
-  html2canvas(document.getElementById('mobile'),{
-    scale: 1,           // 2倍の解像度で書き出し（ボケ防止）
-    useCORS: true,      // 画像の読み込みエラー対策
-    width: 720,         // 切り出すサイズを固定
-    height: 1280,
-    scrollX: 0,         // スクロール位置によるズレを防止
-    scrollY: 0,
-    windowWidth: 720,   // ブラウザの幅を固定して計算させる
-    windowHeight: 1280
-  }).then(function(canvas){
-        document.getElementById('result').src = canvas.toDataURL()}
-      );
-});

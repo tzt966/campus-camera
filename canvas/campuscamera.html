@@ -14,7 +14,9 @@ https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js
     </head>
     <body>
         <div id = "mobile">
-            <canvas id="camera"></canvas>
+            <video id="video"></video>
+            <canvas id="cam"></canvas>
+            <canvas id="ui"></canvas>
             <div class="overlay">
                 <div class="dialogue-content">
                     <p id="ichigyome">私のことをよく調べもせずに</p>
@@ -22,9 +24,10 @@ https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js
                 </div>
             </div>
         </div>
-        <button id="start" class="button-one">カメラ起動</button>
+        <button id="start">カメラ起動</button>
         <button id="takepicture">撮影</button>
         <img id="result">
         <script src="camera.js"></script>
+        <script src="takephoto.js"></script>
     </body>
 </html>
