@@ -92,11 +92,19 @@ satuei.addEventListener("click", async () => {
     }
 
     // videoを出力サイズに合わせて描画
-    outCtx.drawImage(video, sx, sy, sw, sh, 0, 0, outCanvas.width, outCanvas.height);
+    outCtx.drawImage(video, sx, sy, sw, sh, 0, 0, outCanvas.width,  outCanvas.height);
 
     //UIを描画
     outCtx.drawImage(mobile, 0, 0, outCanvas.width, outCanvas.height);
 
-    // 保存
-    document.getElementById("kekka").src = outCanvas.toDataURL();
+    //保存(描画)
+    //document.getElementById("kekka").src = outCanvas.toDataURL();
+
+    //保存
+    outCanvas.toBlob((blob) => {
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "image.png";
+        link.click();
+    });
 });
