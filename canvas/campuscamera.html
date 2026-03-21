@@ -14,7 +14,7 @@ https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js
     </head>
     <body>
         <div id = "mobile">
-            <video id="video"></video>
+            <video id="video" autoplay playsinline muted></video>
             <canvas id="cam"></canvas>
             <canvas id="ui"></canvas>
             <div class="overlay">
@@ -26,8 +26,11 @@ https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js
         </div>
         <button id="start">カメラ起動</button>
         <button id="takepicture">撮影</button>
+        <button id="satuei">撮影2</button>
         <img id="result">
+        <img id="kekka">
         <script src="camera.js"></script>
+        <script src="takephoto.js"></script>
 
     </body>
 </html>

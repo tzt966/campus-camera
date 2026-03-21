@@ -1,9 +1,5 @@
 const canvas = document.getElementById("ui");
-const canvasB = document.getElementById("cam");
 const context = canvas.getContext("2d");
-const video  = document.getElementById("video");
-const start  = document.getElementById("start");
-const tp = document.getElementById("takepicture");
 
 //内部解像度(固定)
 const basewidth = 720;
