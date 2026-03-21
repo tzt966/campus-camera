@@ -19,13 +19,28 @@ https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js
             <canvas id="ui"></canvas>
             <div class="overlay">
                 <div class="dialogue-content">
-                    <p id="ichigyome">私のことをよく調べもせずに</p>
-                    <p id="nigyome">きた方を、信用できません。</p>
                 </div>
             </div>
         </div>
+        <select id="character">
+            <option value="lilja">リーリヤ</option>
+            <option value="saki">咲季</option>
+            <option value="temari">手毬</option>
+            <option value="kotone">ことね</option>
+            <option value="mao">麻央</option>
+            <option value="china">千奈</option>
+            <option value="sumika">清夏</option>
+            <option value="hiro">広</option>
+            <option value="sena">星南</option>
+            <option value="ume">佑芽</option>
+            <option value="rinami">莉波</option>
+            <option value="misuzu">美鈴</option>
+            <option value="tsubame">燕</option>
+        </select>
+        <input type="text" id="dialogueone">
+        <input type="text" id="dialoguetwo">
+        <input type="submit" id="submit">
         <button id="start">カメラ起動</button>
-        <button id="takepicture">撮影</button>
         <button id="satuei">撮影2</button>
         <img id="result">
         <img id="kekka">

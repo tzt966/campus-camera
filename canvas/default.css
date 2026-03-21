@@ -4,6 +4,12 @@
     --scale: 1;
 }
 
+/* フォントを強制的に「ブロック（準備できるまで待機）」させる設定 */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-display: block; /* swap ではなく block にすると、準備できるまで文字を出さない */
+}
+
 body{
     background-color: rgb(224, 215, 215);
     padding: 0;
@@ -51,6 +57,8 @@ body{
     width: 100%;
     height: 100%;
     z-index: 2;
+
+    /*字間調整*/
 }
 
 .overlay{

@@ -10,7 +10,6 @@ let initialized = false;
 
 //カメラ起動部
 start.addEventListener("click", async () => {
-    alert("カメラを起動");
 
     try {
         const stream = await navigator.mediaDevices.getUserMedia({
@@ -59,30 +58,9 @@ function draw() {
   requestAnimationFrame(draw);
 }
 
-
-
-
-//撮影ボタン
-takephoto.addEventListener("click", async () => {
-    alert("おしっこ");
-    html2canvas(document.getElementById('mobile'),{
-    scale: 1,           // 2倍の解像度で書き出し（ボケ防止）
-    useCORS: true,      // 画像の読み込みエラー対策
-    width: 720,         // 切り出すサイズを固定
-    height: 1280,
-    scrollX: 0,         // スクロール位置によるズレを防止
-    scrollY: 0,
-    windowWidth: 720,   // ブラウザの幅を固定して計算させる
-    windowHeight: 1280
-  }).then(function(canvas){
-        document.getElementById('result').src = canvas.toDataURL()}
-      );
-});
-
 const satuei = document.getElementById("satuei");
 
 satuei.addEventListener("click", async () => {
-    alert("おちんちん");
 
     const outCanvas = document.createElement("canvas");
     const outCtx = outCanvas.getContext("2d");
