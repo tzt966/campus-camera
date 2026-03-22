@@ -1,8 +1,4 @@
-:root{
-    --unit: 1px;
-    --textcolor: #000000;
-    --scale: 1;
-}
+
 
 /* フォントを強制的に「ブロック（準備できるまで待機）」させる設定 */
 @font-face {
@@ -19,8 +15,8 @@ body{
 #mobile{
     display: block;
     position: relative;
-    height: 100vh;
-    width: calc(100vh * 9 / 16);
+    height: 90vh;
+    width: calc(90vh * 9 / 16);
     padding: 0;
     margin: 0;
     background-color: aqua;
@@ -102,3 +98,25 @@ body{
     letter-spacing: 0.015em;
 }
 
+/*設定画面*/
+.settings{
+    width: calc(90vh * 9 / 16);
+}
+
+.settings-inside{
+    display: block;
+    width: 86%;
+    margin: 0 auto;
+}
+
+.settings-area{
+    display: block;
+    background-color: var(--white);
+
+    border-radius: 0 calc(var(--scale) * var(--unit) * 12) 0 calc(var(--scale) * var(--unit) * 15);
+
+    padding: 0;
+    padding-bottom: calc(var(--scale) * var(--unit) * 30);
+    margin: 0;
+    margin-bottom: calc(var(--scale) * var(--unit) * 15);
+}

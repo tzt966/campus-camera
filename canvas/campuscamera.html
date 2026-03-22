@@ -2,7 +2,10 @@
 <html lang="ja">
     <head>
         <title>Campus Camera(Canvas版)</title>
+        <link rel="stylesheet" href="variables.css">
         <link rel="stylesheet" href="default.css">
+        <link rel="stylesheet" href="uiparts.css">
+        
 
         <!--webフォント読み込み-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,30 +25,44 @@ https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js
                 </div>
             </div>
         </div>
-        <select id="character">
-            <option value="lilja">リーリヤ</option>
-            <option value="saki">咲季</option>
-            <option value="temari">手毬</option>
-            <option value="kotone">ことね</option>
-            <option value="mao">麻央</option>
-            <option value="china">千奈</option>
-            <option value="sumika">清夏</option>
-            <option value="hiro">広</option>
-            <option value="sena">星南</option>
-            <option value="ume">佑芽</option>
-            <option value="rinami">莉波</option>
-            <option value="misuzu">美鈴</option>
-            <option value="tsubame">燕</option>
-        </select>
-        <input type="text" id="dialogueone" value="かわいい……です……！">
-        <input type="text" id="dialoguetwo" value="メイドさん……！">
-        <input type="submit" id="submit">
-        <button id="start">カメラ起動</button>
-        <button id="satuei">撮影2</button>
+        <div class="settings">
+            <div class="settings-inside">
+                <div class="settings-area">
+                    <h3>話数設定</h3>
+                    <input type="text" id="storytype" class="inputbox-default" value="親愛度">
+                    <input type="text" id="storyno" class="inputbox-default" value="第１話">
+                </div>
+                <div class="settings-area">
+                <h3>キャラクター設定</h3>
+                <select id="character">
+                    <option value="lilja">リーリヤ</option>
+                    <option value="saki">咲季</option>
+                    <option value="temari">手毬</option>
+                    <option value="kotone">ことね</option>
+                    <option value="mao">麻央</option>
+                    <option value="china">千奈</option>
+                    <option value="sumika">清夏</option>
+                    <option value="hiro">広</option>
+                    <option value="sena">星南</option>
+                    <option value="ume">佑芽</option>
+                    <option value="rinami">莉波</option>
+                    <option value="misuzu">美鈴</option>
+                    <option value="tsubame">燕</option>
+                </select>
+                </div>
+                <div class="settings-area">
+                <h3>セリフ設定</h3>
+                <input type="text" id="dialogueone" class="inputbox-default" value="かわいい……です……！">
+                <input type="text" id="dialoguetwo" class="inputbox-default" value="メイドさん……！">
+                </div>
+                <input type="submit" id="submit">
+                <button id="start">カメラ起動</button>
+                <button id="satuei">撮影</button>
+            </div>
+        </div>
         <img id="result">
         <img id="kekka">
         <script src="camera.js"></script>
         <script src="takephoto.js"></script>
-
     </body>
 </html>

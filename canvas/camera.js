@@ -349,7 +349,6 @@ function drawUI(){
         context.fillStyle = speakercolor;
         context.fillText(speaker, 61, 939);
 
-
         context.font = '500 26px "IBM Plex Sans JP"'
         context.fillStyle = textcolor;
         context.fillText(textone, 79, 1005);
@@ -396,6 +395,8 @@ const submit = document.getElementById("submit");
 
 submit.addEventListener("click", async () => {
     //inputboxの内容を取得
+    storytype = document.getElementById("storytype").value;
+    tailno = document.getElementById("storyno").value;
     textone = document.getElementById("dialogueone").value;
     texttwo = document.getElementById("dialoguetwo").value;
     speaker = document.getElementById("character").value;

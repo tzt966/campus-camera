@@ -1,0 +1,58 @@
+/*学マス風入力欄*/
+.inputbox-default{
+    display: inline-block;
+
+    height: calc(var(--scale) * var(--unit) * 56);
+    /*width: calc(var(--scale) * var(--unit) * 379);*/
+    width: 90%;
+    margin-left: 5%;
+
+    margin-top: calc(var(--scale) * var(--unit) * 14);
+
+    background-color: var(--white);
+
+    box-sizing: border-box;
+    border: calc(var(--scale) * var(--unit) * 3) solid var(--bordercolor);
+    border-radius: 0 calc(var(--scale) * var(--unit) * 16) 0 calc(var(--scale) * var(--unit) * 16);
+
+    /*文字周り*/
+    font-family: "IBM Plex Sans JP", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--textcolor);
+    
+    /*文字サイズ調整*/
+    font-size: calc(var(--scale) * var(--unit) * 22);
+
+    padding-left: 1em;
+}
+
+/*入力中*/
+.inputbox-default:focus{
+    background-color: var(--focus);
+
+    outline:none;
+}
+
+/*小見出し*/
+h3{
+    display: block;
+    height: calc(var(--scale) * var(--unit) * 47);
+    margin: 0;
+
+    background: linear-gradient(135deg, var(--menurichorange) 0%, var(--menuorange) 75%, var(--menupaleorange) 75%);
+
+    border-radius: 0 calc(var(--scale) * var(--unit) * 12) 0 0;
+
+    /*文字周り*/
+    font-family: "IBM Plex Sans JP", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--white);
+    
+    /*文字サイズ調整*/
+    font-size: calc(var(--scale) * var(--unit) * 26);
+    line-height: calc(var(--scale) * var(--unit) * 52);
+
+    padding-left: 1em;
+}
