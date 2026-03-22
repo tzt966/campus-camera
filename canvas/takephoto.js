@@ -98,13 +98,13 @@ satuei.addEventListener("click", async () => {
     outCtx.drawImage(mobile, 0, 0, outCanvas.width, outCanvas.height);
 
     //保存(描画)
-    //document.getElementById("kekka").src = outCanvas.toDataURL();
+    document.getElementById("kekka").src = outCanvas.toDataURL();
 
     //保存
-    outCanvas.toBlob((blob) => {
-        const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = "image.png";
-        link.click();
-    });
+    //outCanvas.toBlob((blob) => {
+        //const link = document.createElement("a");
+        //link.href = URL.createObjectURL(blob);
+        //link.download = "image.png";
+        //link.click();
+    //});
 });
